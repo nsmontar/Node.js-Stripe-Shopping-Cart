@@ -28,6 +28,14 @@ app.get('/store', function(req, res) {
     });
 });
 
+app.get('/', function(req, res) {
+    res.render('index.ejs');
+});
+
+app.get('/about', function(req, res) {
+    res.render('about.ejs');
+});
+
 app.post("/purchase", function(req, res) {
     fs.readFile('items.json', function(error, data) {
         if(error) {
